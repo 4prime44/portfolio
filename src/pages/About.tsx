@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutAnimation from "./AboutAnimation";
 import styles from './styles/Aboutstyle.module.css';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 function About() {
   const secondPageRef = useRef(null);
   const [showSecond, setShowSecond] = useState(false);

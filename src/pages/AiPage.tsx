@@ -1,6 +1,6 @@
 import styles from "./styles/AiPage.module.css";
-import React, { useState } from "react"; 
-import { Routes, Route, Link } from 'react-router-dom'; 
+import { useState } from "react"; 
+import {Link } from 'react-router-dom'; 
 type TopicKey = "python" | "vision" | "robotics" | "drones" | "ml";
 
 const topics = {
