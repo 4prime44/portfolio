@@ -8,7 +8,9 @@ import styles from './App.module.css';
 
 function Layout() {
   const location = useLocation();
-  const isHome = location.pathname === '/';
+  
+
+  const isHome = location.pathname === '/' || location.pathname === '';
 
   return (
     <div className={styles.appContainer}>
@@ -26,6 +28,7 @@ function Layout() {
             element={
               <>
                 <nav className={styles.navigation}>
+
                   <Link to="/About">About</Link>
                   <Link to="/cybersecurity">Cybersecurity</Link>
                   <Link to="/ai-python">AI & Python</Link>
@@ -52,8 +55,10 @@ function Layout() {
 }
 
 function App() {
+  const routerBasename = import.meta.env.DEV ? '/' : '/portfolio';
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename}>
       <Layout />
     </BrowserRouter>
   );
