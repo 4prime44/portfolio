@@ -1,0 +1,170 @@
+.mainNav{
+    position: fixed;
+}
+body{
+    overflow: scroll;
+}
+.fs_container {
+  min-height: 100vh;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  background: #050816;
+  color: white;
+}
+
+/* LEWA STRONA */
+
+.fs-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fs-left h1 {
+  height: auto;
+  margin:0 10% 5% 10%;
+  width: 80%;
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  color: #61dafb;
+  text-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
+}
+
+.architecture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.layer {
+  width: 320px;
+  padding: 25px;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(97, 218, 251, 0.2);
+
+  transition: all 0.3s ease;
+}
+
+.layer:hover {
+  transform: translateY(-5px);
+  border-color: #61dafb;
+  box-shadow: 0 0 30px rgba(97, 218, 251, 0.3);
+}
+
+.layer.active {
+  background: rgba(97, 218, 251, 0.08);
+  border-color: #61dafb;
+
+  box-shadow:
+    0 0 20px rgba(97, 218, 251, 0.3),
+    0 0 40px rgba(97, 218, 251, 0.2);
+}
+
+.connector {
+  width: 4px;
+  height: 60px;
+  
+  background: linear-gradient(
+    to bottom,
+    #61dafb,
+    rgba(97, 218, 251, 0.2)
+  );
+}
+
+/* PRAWA STRONA */
+
+.fs-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.info-card {
+  width: 100%;
+  padding: 30px;
+
+  border-radius: 24px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(97, 218, 251, 0.15);
+
+  backdrop-filter: blur(20px);
+
+  box-shadow:
+    0 0 40px rgba(97, 218, 251, 0.08);
+}
+
+.info-card h2 {
+  color: #61dafb;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.info-card p {
+  color: #b5bfd0;
+  line-height: 1.8;
+}
+
+.info-card h3 {
+  margin-top: 30px;
+  color: #61dafb;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-grid span {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(97, 218, 251, 0.08);
+
+  border: 1px solid rgba(97, 218, 251, 0.2);
+
+  transition: 0.3s;
+}
+
+.tech-grid span:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 15px rgba(97, 218, 251, 0.2);
+}
+
+.info-card ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.info-card li {
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+/* MOBILE */
+
+@media (max-width: 1000px) {
+  .fs-container {
+    flex-direction: column;
+  }
+
+  .layer {
+    width: 100%;
+    max-width: 350px;
+  }
+}

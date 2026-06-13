@@ -1,0 +1,60 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* znikanie całości */
+.preloader.hide {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* LOGO */
+.logo {
+  width: 550px; /* <-- TUTAJ ZMIENIASZ ROZMIAR LOGA (większe/mniejsze) */
+  transform: scale(0.3);
+  transition: transform 1.2s ease;
+  z-index: 2;
+}
+
+.logo.open {
+  transform: scale(1.2); /* <-- TUTAJ ZWIĘKSZASZ FINALNY ROZMIAR LOGA */
+}
+
+/* WSPÓLNE L */
+.corner {
+  position: absolute;
+  width: 160px;  /* <-- TUTAJ DŁUGOŚĆ RAMIENIA L (większe L = większa ramka) */
+  height: 160px; /* <-- TUTAJ TEŻ ZMIENIASZ PROPORCJĘ L */
+  border: 2px solid white;
+  transition: transform 1.2s ease;
+}
+
+/* usuwamy boki żeby zrobić L */
+.tl {
+  top: 45%;
+  left: 45%;
+  border-right: none;
+  border-bottom: none;
+}
+
+.br {
+  bottom: 45%;
+  right: 45%;
+  border-left: none;
+  border-top: none;
+}
+
+/* OTWIERANIE (ruch jak zamek) */
+.tl.open {
+   transform: translate(-220px, -220px); /* <-- TU ZWIĘKSZASZ ROZCHYLENIE L */
+}
+
+.br.open {
+  transform: translate(220px, 220px); /* <-- TU ZWIĘKSZASZ ROZCHYLENIE L */
+}

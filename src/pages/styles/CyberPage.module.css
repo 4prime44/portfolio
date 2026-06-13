@@ -1,0 +1,147 @@
+/* ===== BASE ===== */
+.pageWrapper {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #05070f;
+  color: #d1d5db;
+}
+.mainNav{
+  position: relative;
+}
+
+/* grid */
+.pageWrapper::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+.mainpart {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/*panels*/
+.panel {
+  flex: 1;
+  background: rgba(10, 15, 25, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  transition: 0.3s ease;
+}
+
+.panel:hover {
+  border-color: rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+/* text */
+.panel-header h2 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #00f5ff;
+}
+
+.panel-header p {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/*tool search bar*/
+.panel-header input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0,255,255,0.2);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  outline: none;
+}
+
+.panel-header input:focus {
+  border-color: #00f5ff;
+  box-shadow: 0 0 10px rgba(0,245,255,0.3);
+}
+
+/* tools grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tool {
+  padding: 10px;
+  background: rgba(0,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.1);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tool:hover {
+  transform: translateY(-2px);
+  border-color: #00f5ff;
+  box-shadow: 0 0 10px rgba(0,245,255,0.2);
+}
+
+/* accordion layout */
+.accordion details {
+  background: rgba(255,255,255,0.03);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,255,255,0.1);
+}
+
+.accordion summary {
+  cursor: pointer;
+  color: #00f5ff;
+  font-weight: 500;
+}
+
+/* projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.project-card {
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0,255,255,0.05);
+  border: 1px solid rgba(0,255,255,0.1);
+  transition: 0.2s;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  border-color: #00f5ff;
+  box-shadow: 0 0 15px rgba(0,245,255,0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .mainpart {
+    flex-direction: column;
+  }
+}

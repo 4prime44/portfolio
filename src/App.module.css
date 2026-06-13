@@ -1,0 +1,93 @@
+
+.canvasBg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  padding: 20px;
+}
+
+.heroTitle {
+  width: 70%;
+  margin: 0 auto;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 70px;
+}
+
+.hero {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  --_space: ;
+
+  background-image: linear-gradient(
+    90deg var(--_space),
+    #bc80f5 0%,
+    #e65355 16.66%,
+    #42cf4e 33.33%,
+    #bc80f5 50%,
+    #e65355 66.66%,
+    #42cf4e 83.33%,
+    #bc80f5 100%
+  );
+
+  background-size: 200% 100%;
+
+  /* Połączone animacje w jedną regułę */
+  animation:
+    gradientMove 6s linear infinite,
+    glowPulse 4s ease-in-out infinite alternate;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@supports (background-image: linear-gradient(in oklch, #000, #fff)) {
+  .hero {
+    --_space: in oklch;
+  }
+}
+
+/* Animacje zostają globalne wewnątrz modułu, ale wywoływane przez lokalne klasy */
+@keyframes gradientMove {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 8px rgba(188, 128, 245, 0.3),
+      0 0 16px rgba(188, 128, 245, 0.2);
+  }
+  to {
+    text-shadow:
+      0 0 12px rgba(66, 207, 78, 0.35),
+      0 0 24px rgba(230, 83, 85, 0.25);
+  }
+}
