@@ -14,7 +14,7 @@ body {
     align-items: center; 
     justify-content: center; 
     height: auto;
-    background-color: #1e1e1e; 
+    background: #03040b;
     position: relative; 
     overflow: hidden;
     min-height: 800px;
@@ -87,7 +87,6 @@ body {
 }
 .second-page {
     height: calc(100vh - 60px);
-    background-color: #1e1e1e;
     display: flex;
     align-items: flex-start;
     scroll-snap-align: start;
@@ -212,4 +211,26 @@ body {
     .r2side {
         width: 100%;
     }
+}
+@media (max-width: 768px) {
+  .mpage {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0; 
+  }
+.second-page{
+    scale: 0.7;
+}
+   .l2side{
+    margin: 0;
+   padding: 0;
+    text-wrap-mode: wrap;
+  }
+.l2side h2,
+.r2side h2 {
+    color: #8b5cf6;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    margin-left:-20px
+}
 }

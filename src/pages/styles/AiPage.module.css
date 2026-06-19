@@ -1,8 +1,9 @@
 .mainNav{
-  position: absolute;
+    background: #03040b;
+  position: relative;
 }
 .ai-page {
-  min-height: 100vh;
+
   background: #03040b;
   color: white;
   display: flex;

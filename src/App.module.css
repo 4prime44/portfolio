@@ -1,5 +1,7 @@
 
 .canvasBg {
+  overflow-x: hidden;
+  width: 100%;
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -8,6 +10,8 @@
 }
 
 .content {
+  overflow: hidden;
+  width: 100%;
   position: relative;
   z-index: 1;
   min-height: 100vh;

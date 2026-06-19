@@ -44,7 +44,7 @@ export default function AiPage() {
       <nav className={styles.mainNav}>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/ai-python">Cybersecurity</Link>
+            <Link to="/cybersecurity">Cybersecurity</Link>
             <Link to="/fullstack">Fullstack</Link>
       </nav>
     <div className={styles['ai-page']}>
